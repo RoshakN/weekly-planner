@@ -1,8 +1,11 @@
-# React + Vite
+# Weekly Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is made using the following technologies:
 
-Currently, two official plugins are available:
+- React
+- TailwindCSS
+- Redux Toolkit
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I might add an expense tracker to it later.
+
+To view a live demo, [CLICK HERE](https://weekly-planner-roshakn.netlify.app/)!

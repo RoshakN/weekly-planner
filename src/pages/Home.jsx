@@ -4,7 +4,7 @@ import Day from "../components/Day";
 
 function Home() {
   return (
-    <div className="overflow-hidden bg-[#ebe7e1] h-full">
+    <div className="overflow-hidden bg-[#ebe7e1] h-full md:h-screen">
       <Header />
       <section className="grid grid-cols-2 mx-2 gap-x-3 md:grid-cols-4">
         <Day day={"Saturday"} />
@@ -15,7 +15,7 @@ function Home() {
         <Day day={"Thursday"} />
         <Day day={"Friday"} />
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

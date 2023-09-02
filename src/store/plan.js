@@ -16,7 +16,7 @@ const planSlice = createSlice({
   name: "plan",
   initialState: initialPlanState,
   reducers: {
-    addTask(state, action) {
+    addTaskSat(state, action) {
       state.saturday.task1 = action.payload;
     },
   },

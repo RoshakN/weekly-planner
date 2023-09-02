@@ -4,7 +4,7 @@ import Day from "../components/Day";
 
 function Home() {
   return (
-    <div className="bg-[#ebe7e1] h-screen">
+    <div className="bg-[#ebe7e1] h-full">
       <Header />
       <section className="grid grid-cols-2 mx-2 gap-x-3 md:grid-cols-4">
         <Day day={"Saturday"} />

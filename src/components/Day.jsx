@@ -2,7 +2,7 @@ import AddTask from "./AddTask";
 
 function Day(props) {
   return (
-    <div className="bg-[#fcf8f0] h-[200px] rounded-md relative my-2">
+    <div className="bg-[#fcf8f0] h-[200px] rounded-md relative my-2 md:h-[300px]">
       <h1 className="h-max text-[#d4993b] font-bold text-lg text-center rounded-t-md bg-gradient-to-br from-[#fce0b3] to-[#f5e2c4]">
         {props.day}
       </h1>

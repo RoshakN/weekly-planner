@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <div>
+    <div className="tracking-widest font-indieFlower">
       <Home />
     </div>
   );

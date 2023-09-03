@@ -1,4 +1,4 @@
-import AddTask from "./AddTask";
+import { RiAddBoxFill } from "react-icons/ri";
 
 function Day(props) {
   return (
@@ -10,7 +10,10 @@ function Day(props) {
         <li>task1</li>
         <li>task2</li>
       </section>
-      <AddTask />
+      <RiAddBoxFill
+        size={"1.75rem"}
+        className="absolute bottom-[10px] right-[10px] cursor-pointer active:text-[#f0ae51] md:hover:text-[#f0ae51] md:active:text-[#b6833c]"
+      />
     </div>
   );
 }

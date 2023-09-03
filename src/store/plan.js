@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialPlanState = {
   saturday: {
-    task1: "",
+    task1: "This is task 1",
   },
   sunday: {},
   monday: {},

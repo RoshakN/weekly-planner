@@ -7,12 +7,11 @@ import { Fragment } from "react";
 
 function AddTaskModal() {
   const modalState = useSelector((state) => state.modal);
-  const planState = useSelector((state) => state.plan);
 
   const dispatch = useDispatch();
 
   const addHandler = () => {
-    dispatch(planActions.addTaskSat([...planState.saturday, modalState.text]));
+    dispatch(planActions.addTask(modalState.text));
     dispatch(modalActions.setOpen(false));
   };
 

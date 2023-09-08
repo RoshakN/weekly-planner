@@ -1,7 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
 import { modalActions } from "../store/modal";
 
-import { RiAddBoxFill } from "react-icons/ri";
+import {
+  RiAddBoxFill,
+  RiCheckboxBlankLine,
+  RiCheckboxLine,
+  RiDeleteBin2Line,
+} from "react-icons/ri";
 import { planActions } from "../store/plan";
 
 function Day(props) {
@@ -17,19 +22,28 @@ function Day(props) {
   return (
     <div
       id={day}
-      className="bg-[#fcf8f0] h-[200px] rounded-md relative my-2 md:h-[300px] shadow-md"
+      className="bg-[#fcf8f0] h-[200px] rounded-md relative my-2 md:h-[300px] shadow-md overflow-y-auto"
     >
       <h1 className="first-letter:capitalize h-max py-1 text-[#d4993b] font-bold text-xl text-center rounded-t-md bg-gradient-to-br from-[#fce0b3] to-[#f5e2c4]">
         {day}
       </h1>
       <section className="p-3 mx-2 text-lg list-decimal">
         {dailyTasks.map((task) => (
-          <li key={task}>{task}</li>
+          <div
+            key={task}
+            className="flex items-center justify-between px-px my-1"
+          >
+            <p className="overflow-hidden text-xs md:text-base">{task}</p>
+            <div className="flex items-center justify-center">
+              <RiCheckboxBlankLine />
+              <RiDeleteBin2Line />
+            </div>
+          </div>
         ))}
       </section>
       <RiAddBoxFill
         size={"1.75rem"}
-        className="absolute bottom-[10px] right-[10px] cursor-pointer active:text-[#f0ae51] md:hover:text-[#f0ae51] md:active:text-[#b6833c]"
+        className="absolute top-[4px] right-[6px] cursor-pointer text-[#a56307] active:text-[#bd8436] md:hover:text-[#bd8436] md:active:text-[#b6833c]"
         onClick={() => addTaskHandler(day)}
       />
     </div>

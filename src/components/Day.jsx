@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { modalActions } from "../store/modal";
 
 import { RiAddBoxFill } from "react-icons/ri";
+import { planActions } from "../store/plan";
 
 function Day(props) {
   const plans = useSelector((state) => state.plan.saturday);
@@ -9,8 +10,9 @@ function Day(props) {
 
   const day = props.day;
 
-  const addTaskHandler = (id) => {
+  const addTaskHandler = (dayName) => {
     dispatch(modalActions.setOpen(true));
+    dispatch(planActions.setEditingDay(dayName));
   };
   return (
     <div

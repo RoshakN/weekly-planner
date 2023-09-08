@@ -9,13 +9,13 @@ function Home() {
       <AddTaskModal />
       <Header />
       <section className="grid grid-cols-2 mx-2 gap-x-3 md:grid-cols-4">
-        <Day day={"Saturday"} />
-        <Day day={"Sunday"} />
-        <Day day={"Monday"} />
-        <Day day={"Tuesday"} />
-        <Day day={"Wednesday"} />
-        <Day day={"Thursday"} />
-        <Day day={"Friday"} />
+        <Day day={"saturday"} />
+        <Day day={"sunday"} />
+        <Day day={"monday"} />
+        <Day day={"tuesday"} />
+        <Day day={"wednesday"} />
+        <Day day={"thursday"} />
+        <Day day={"friday"} />
       </section>
       {/* <Footer /> */}
     </div>

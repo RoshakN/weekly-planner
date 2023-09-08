@@ -33,7 +33,9 @@ function Day(props) {
             key={task}
             className="flex items-center justify-between px-px my-1"
           >
-            <p className="overflow-hidden text-xs md:text-base">{task}</p>
+            <p className="overflow-hidden text-xs md:text-base">
+              {task.taskTitle}
+            </p>
             <div className="flex items-center justify-center">
               <RiCheckboxBlankLine />
               <RiDeleteBin2Line />

@@ -19,27 +19,49 @@ const planSlice = createSlice({
       state.editingDay = action.payload;
     },
     addTask(state, action) {
+      const id = Math.random().toString(36).substring(7);
       switch (state.editingDay) {
         case "saturday":
-          state.saturday = [...state.saturday, action.payload];
+          state.saturday = [
+            ...state.saturday,
+            { taskTitle: action.payload, id: id },
+          ];
           break;
         case "sunday":
-          state.sunday = [...state.sunday, action.payload];
+          state.sunday = [
+            ...state.sunday,
+            { taskTitle: action.payload, id: id },
+          ];
           break;
         case "monday":
-          state.monday = [...state.monday, action.payload];
+          state.monday = [
+            ...state.monday,
+            { taskTitle: action.payload, id: id },
+          ];
           break;
         case "tuesday":
-          state.tuesday = [...state.tuesday, action.payload];
+          state.tuesday = [
+            ...state.tuesday,
+            { taskTitle: action.payload, id: id },
+          ];
           break;
         case "wednesday":
-          state.wednesday = [...state.wednesday, action.payload];
+          state.wednesday = [
+            ...state.wednesday,
+            { taskTitle: action.payload, id: id },
+          ];
           break;
         case "thursday":
-          state.thursday = [...state.thursday, action.payload];
+          state.thursday = [
+            ...state.thursday,
+            { taskTitle: action.payload, id: id },
+          ];
           break;
         case "friday":
-          state.friday = [...state.friday, action.payload];
+          state.friday = [
+            ...state.friday,
+            { taskTitle: action.payload, id: id },
+          ];
           break;
       }
     },

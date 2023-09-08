@@ -26,7 +26,7 @@ function AddTaskModal() {
   return (
     <Fragment>
       {modalState.open && (
-        <div className="z-50 bg-[#fcf8f0] h-screen w-screen fixed flex justify-center items-center">
+        <div className="z-50 bg-[#fcf8f0] bg-opacity-40 h-screen w-screen fixed flex justify-center items-center">
           <div className="w-1/2 bg-gradient-to-br from-[#fce0b3] to-[#f5e2c4] h-1/3 flex flex-col items-center rounded-lg">
             <div className="flex font-greatVibes w-full h-max items-center bg-gradient-to-br from-[#f8d49a] to-[#f1b95f] rounded-t-lg">
               <h1 className="p-3 text-xl">Create a new task</h1>
@@ -38,10 +38,10 @@ function AddTaskModal() {
             <input
               type="text"
               placeholder="New Task..."
-              className="h-8 w-3/4 md:w-1/2 placeholder:p-2 mt-auto mb-5"
+              className="w-3/4 h-8 mt-auto mb-5 md:w-1/2 placeholder:p-2"
               onChange={handleChange}
             />
-            <div className="p-5 w-3/4 flex justify-around text-sm md:text-base">
+            <div className="flex justify-around w-3/4 p-5 text-sm md:text-base">
               <button
                 className="bg-gradient-to-br from-[#f8d49a] to-[#f1b95f] p-2"
                 onClick={addHandler}

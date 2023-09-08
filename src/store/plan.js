@@ -30,16 +30,16 @@ const planSlice = createSlice({
           state.monday = [...state.monday, action.payload];
           break;
         case "tuesday":
-          state.tuesday = [...state.monday, action.payload];
+          state.tuesday = [...state.tuesday, action.payload];
           break;
         case "wednesday":
-          state.wednesday = [...state.monday, action.payload];
+          state.wednesday = [...state.wednesday, action.payload];
           break;
         case "thursday":
-          state.thursday = [...state.monday, action.payload];
+          state.thursday = [...state.thursday, action.payload];
           break;
         case "friday":
-          state.friday = [...state.monday, action.payload];
+          state.friday = [...state.friday, action.payload];
           break;
       }
     },

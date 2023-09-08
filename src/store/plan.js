@@ -1,15 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialPlanState = {
-  saturday: {
-    task1: "This is task 1",
-  },
-  sunday: {},
-  monday: {},
-  tuesday: {},
-  wednesday: {},
-  thursday: {},
-  friday: {},
+  saturday: [],
+  sunday: [],
+  monday: [],
+  tuesday: [],
+  wednesday: [],
+  thursday: [],
+  friday: [],
 };
 
 const planSlice = createSlice({
@@ -17,7 +15,7 @@ const planSlice = createSlice({
   initialState: initialPlanState,
   reducers: {
     addTaskSat(state, action) {
-      state.saturday.task1 = action.payload;
+      state.saturday = action.payload;
     },
   },
 });

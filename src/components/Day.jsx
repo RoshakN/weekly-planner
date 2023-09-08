@@ -5,10 +5,10 @@ import { RiAddBoxFill } from "react-icons/ri";
 import { planActions } from "../store/plan";
 
 function Day(props) {
-  const plans = useSelector((state) => state.plan.saturday);
-  const dispatch = useDispatch();
-
   const day = props.day;
+
+  const dailyTasks = useSelector((state) => state.plan[day]);
+  const dispatch = useDispatch();
 
   const addTaskHandler = (dayName) => {
     dispatch(modalActions.setOpen(true));
@@ -23,7 +23,7 @@ function Day(props) {
         {day}
       </h1>
       <section className="p-3 mx-2 text-lg list-decimal">
-        {plans.map((task) => (
+        {dailyTasks.map((task) => (
           <li key={task}>{task}</li>
         ))}
       </section>

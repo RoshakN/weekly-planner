@@ -19,6 +19,12 @@ function Day(props) {
     dispatch(modalActions.setOpen(true));
     dispatch(planActions.setEditingDay(dayName));
   };
+
+  const taskDoneHandler = (id) => {
+    dispatch(planActions.setEditingDay(day));
+    dispatch(planActions.setDoneTask(id));
+  };
+
   return (
     <div
       id={day}
@@ -37,7 +43,11 @@ function Day(props) {
               {task.taskTitle}
             </p>
             <div className="flex items-center justify-center">
-              <RiCheckboxBlankLine />
+              {!task.done ? (
+                <RiCheckboxBlankLine onClick={() => taskDoneHandler(task.id)} />
+              ) : (
+                <RiCheckboxLine onClick={() => taskDoneHandler(task.id)} />
+              )}
               <RiDeleteBin2Line />
             </div>
           </div>

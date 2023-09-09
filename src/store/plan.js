@@ -11,9 +11,11 @@ const initialPlanState = {
   friday: [],
 };
 
+const storedTasks = JSON.parse(localStorage.getItem("myTasks"));
+
 const planSlice = createSlice({
   name: "plan",
-  initialState: initialPlanState,
+  initialState: storedTasks || initialPlanState,
   reducers: {
     setEditingDay(state, action) {
       state.editingDay = action.payload;
@@ -64,6 +66,7 @@ const planSlice = createSlice({
           ];
           break;
       }
+      localStorage.setItem("myTasks", JSON.stringify(state));
     },
   },
 });

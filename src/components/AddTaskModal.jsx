@@ -27,7 +27,7 @@ function AddTaskModal() {
     <Fragment>
       {modalState.open && (
         <div className="z-50 bg-[#fcf8f0] bg-opacity-40 h-screen w-screen fixed flex justify-center items-center">
-          <div className="w-1/2 bg-gradient-to-br from-[#fce0b3] to-[#f5e2c4] h-1/3 flex flex-col items-center rounded-lg">
+          <div className="w-1/2 bg-gradient-to-br from-[#fce0b3] to-[#f5e2c4] h-1/3 flex flex-col items-center justify-between rounded-lg">
             <div className="flex font-fredericka w-full h-max items-center bg-gradient-to-br from-[#f8d49a] to-[#f1b95f] rounded-t-lg">
               <h1 className="p-3 text-xl">Create a new task</h1>
               <RiCloseCircleFill
@@ -35,21 +35,21 @@ function AddTaskModal() {
                 onClick={closeHandler}
               />
             </div>
-            <input
+            <input autoFocus
               type="text"
               placeholder="New Task..."
-              className="w-3/4 h-8 mt-auto mb-5 md:w-1/2 placeholder:p-2"
+              className="w-3/4 p-2 focus-within:outline-[#f1b95f]"
               onChange={handleChange}
             />
-            <div className="flex justify-around w-3/4 p-5 text-sm md:text-base">
+            <div className="flex justify-between w-3/4 py-2 mb-5 text-sm md:text-base">
               <button
-                className="bg-gradient-to-br from-[#f8d49a] to-[#f1b95f] p-2"
+                className="bg-gradient-to-br from-[#f8d49a] to-[#f1b95f] p-2 w-1/3 rounded-sm"
                 onClick={addHandler}
               >
                 Add
               </button>
               <button
-                className="bg-gradient-to-br from-[#f8d49a] to-[#f1b95f] p-2"
+                className="rounded-sm bg-gradient-to-br from-[#f8d49a] to-[#f1b95f] p-2 w-1/3"
                 onClick={closeHandler}
               >
                 Cancel

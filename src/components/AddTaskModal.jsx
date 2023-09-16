@@ -40,6 +40,7 @@ function AddTaskModal() {
               placeholder="New Task..."
               className="w-3/4 p-2 focus-within:outline-[#f1b95f]"
               onChange={handleChange}
+              onKeyDown={(e) => {(e.key === 'Enter') && addHandler()}}
             />
             <div className="flex justify-between w-3/4 py-2 mb-5 text-sm md:text-base">
               <button

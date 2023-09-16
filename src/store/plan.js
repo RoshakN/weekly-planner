@@ -28,6 +28,10 @@ const planSlice = createSlice({
         localStorage.setItem("myTasks", JSON.stringify(state));
       });
     },
+    setDeleteTask(state, action) {
+      state[state.editingDay] = state[state.editingDay].filter((task) => task.id !== action.payload);
+      localStorage.setItem("myTasks", JSON.stringify(state));
+    },
     addTask(state, action) {
       const id = Math.random().toString(36).substring(7);
       switch (state.editingDay) {

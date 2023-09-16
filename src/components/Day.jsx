@@ -25,6 +25,11 @@ function Day(props) {
     dispatch(planActions.setDoneTask(id));
   };
 
+  const taskDeleteHandler = (id) => {
+    dispatch(planActions.setEditingDay(day));
+    dispatch(planActions.setDeleteTask(id));
+  };
+
   return (
     <div
       id={day}
@@ -34,24 +39,31 @@ function Day(props) {
         {day}
       </h1>
       <section className="p-3 mx-2 text-lg list-decimal">
-        {dailyTasks.map((task) => (
-          <div
-            key={task}
-            className="flex items-center justify-between px-px my-1"
-          >
-            <p className="overflow-hidden text-xs md:text-base">
-              {task.taskTitle}
-            </p>
-            <div className="flex items-center justify-center">
-              {!task.done ? (
-                <RiCheckboxBlankLine onClick={() => taskDoneHandler(task.id)} />
-              ) : (
-                <RiCheckboxLine onClick={() => taskDoneHandler(task.id)} />
-              )}
-              <RiDeleteBin2Line />
-            </div>
-          </div>
-        ))}
+        {dailyTasks.map(
+          (task) =>
+            !task.delete && (
+              <div
+                key={task.id}
+                className="flex items-center justify-between px-px my-1"
+              >
+                <p className="overflow-hidden text-xs md:text-base">
+                  {task.taskTitle}
+                </p>
+                <div className="flex items-center justify-center">
+                  {!task.done ? (
+                    <RiCheckboxBlankLine
+                      onClick={() => taskDoneHandler(task.id)}
+                    />
+                  ) : (
+                    <RiCheckboxLine onClick={() => taskDoneHandler(task.id)} />
+                  )}
+                  <RiDeleteBin2Line
+                    onClick={() => taskDeleteHandler(task.id)} className="ml-2"
+                  />
+                </div>
+              </div>
+            )
+        )}
       </section>
       <RiAddBoxFill
         size={"1.75rem"}

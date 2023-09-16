@@ -33,7 +33,7 @@ function Day(props) {
   return (
     <div
       id={day}
-      className="bg-[#fcf8f0] h-[200px] rounded-md relative my-2 md:h-[300px] shadow-md overflow-y-auto"
+      className="bg-[#fcf8f0] h-[200px] rounded-md relative my-2 md:h-[300px] overflow-y-auto"
     >
       <h1 className="first-letter:capitalize h-max py-1 text-[#d4993b] font-bold text-xl text-center rounded-t-md bg-gradient-to-br from-[#fce0b3] to-[#f5e2c4]">
         {day}

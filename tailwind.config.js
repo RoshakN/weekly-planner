@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        greatVibes: ["Great Vibes", "cursive"],
+        fredericka: ["Fredericka the Great", "cursive"],
         indieFlower: ["Indie Flower", "cursive"],
       },
     },
